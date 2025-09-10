@@ -27,7 +27,7 @@ export default function Home() {
           ))
         ) : (
           <p className="text-center text-lg">
-            ¡No hay pruebas próximas!
+            no mas pruebas :D
           </p>
         )}
       </div>
