@@ -1,0 +1,25 @@
+{
+    "pageTitle": "Desafio del temporizador",
+    "tests": [
+      {
+        "subjectId": "BAIN083",
+        "subjectName": "Calculo en varias variables",
+        "testDate": "2025-09-11 17:30:00"
+      },
+      {
+        "subjectId": "BAIN077-14",
+        "subjectName": "Fisica : Mecanica ",
+        "testDate": "2025-10-12 17:30:00"
+      },
+      {
+        "subjectId": "INFO104",
+        "subjectName": "Taller construccion de software",
+        "testDate": "2025-9-10 23:59:00"
+      },
+      {
+        "subjectId": "BAIN091",
+        "subjectName": "Estadistica y probabilidades para ingenieria",
+        "testDate": "2025-10-13 17:30:00"
+      }
+    ]
+  }
