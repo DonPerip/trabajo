@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { format, intervalToDuration, isAfter, differenceInDays } from 'date-fns';
+import { format, intervalToDuration, isAfter, differenceInCalendarDays } from 'date-fns';
 import { es } from 'date-fns/locale';
 
 export default function TestCard({ test }) {
@@ -14,9 +14,11 @@ export default function TestCard({ test }) {
       const currentTime = new Date();
       if (isAfter(testDate, currentTime)) {
         const duration = intervalToDuration({ start: currentTime, end: testDate });
-        const { days, hours, minutes, seconds } = duration;
-        // Si es 0 o si da un valor indefinido, tira a 0
-        const displayDays = days || 0;
+        const totalDays = differenceInCalendarDays(testDate, currentTime);
+
+        const { hours, minutes, seconds } = duration;
+
+        const displayDays = totalDays || 0;
         const displayHours = hours || 0;
         const displayMinutes = minutes || 0;
         const displaySeconds = seconds || 0;
@@ -32,7 +34,7 @@ export default function TestCard({ test }) {
   }, [testDate]);
 
   // Determina si la prueba está a menos de 7 días de distancia
-  const isApproaching = differenceInDays(testDate, now) < 7 && isAfter(testDate, now);
+  const isApproaching = differenceInCalendarDays(testDate, now) < 7 && isAfter(testDate, now);
 
   return (
     <div className="bg-gray-800 p-6 -lg shadow-lg mb-4 text-white">
