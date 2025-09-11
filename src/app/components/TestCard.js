@@ -45,5 +45,5 @@ export default function TestCard({ test }) {
         Tiempo restante: {timeLeft}
       </p>
     </div>
-  ); // se pregunta en la linea 42 si faltan menos de 7 dias, si es el caso lo pone en rojo 
+  ); // se pregunta en la linea 44 si faltan menos de 7 dias, si es el caso lo pone en rojo 
 }
